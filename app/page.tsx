@@ -390,7 +390,7 @@ export default function HomePage() {
                       Start Searching
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                  <Button asChild size="lg" variant="secondary">
                     <Link href="/seller">
                       List Your Property
                     </Link>
