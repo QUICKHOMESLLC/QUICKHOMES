@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Menu, X, Heart, LayoutDashboard, Users, Home, Building2, Key } from "lucide-react"
 import { useState } from "react"
 import Image from 'next/image'
-import mainLogo from "@/public/quickhomes_logo.png"
+import mainLogo from "@/public/quickhomes_logo.svg"
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
@@ -32,15 +32,21 @@ export function Navbar() {
   const isSeller = pathname.startsWith("/seller")
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 shadow">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/">
-          <Image
-            src={mainLogo}
-            alt="Quick Homes"
-            width={280}
-          />
+          <div className="flex items-center gap-3">
+            <Image
+              src={mainLogo}
+              alt="Quick Homes"
+              width={80}
+            />
+            <div>
+              <h1 className="font-bold text-2xl tracking-wide">QuickHomes</h1>
+              <p className="text-sm font-light">Find &bull; Buy &bull; Sell &bull; Rent</p>
+            </div>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

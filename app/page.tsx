@@ -31,16 +31,16 @@ export default function HomePage() {
       
       {/* Hero Section */}
       <section className="bg-linear-to-tr from-slate-950 to-slate-900">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <div className="text-center">
             <Badge variant="default" className="mb-6">
               <Star className="mr-1 size-3" />
               India&apos;s Trusted Real Estate Platform
             </Badge>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl">
+            <h1 className="text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl mb-2">
               Find, Rent, Buy or Sell Properties
-              <span className="block text-primary">Easily with QuickHomes</span>
             </h1>
+            <h1 className="text-balance text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">Easily with QuickHomes</h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               India&apos;s smarter real estate marketplace. Browse thousands of verified properties across Mumbai, Delhi, Bangalore, and more.
             </p>
@@ -232,7 +232,7 @@ export default function HomePage() {
                 href={`/buyer?city=${city.name}`}
                 className="group relative overflow-hidden rounded-xl"
               >
-                <div className="aspect-[4/3]">
+                <div className="aspect-4/3">
                   <img
                     src={city.image}
                     alt={city.name}
@@ -240,7 +240,7 @@ export default function HomePage() {
                     crossOrigin="anonymous"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white">{city.name}</h3>
                   <p className="text-sm text-white/80">{city.properties.toLocaleString()}+ properties</p>
@@ -268,7 +268,7 @@ export default function HomePage() {
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard className="pt-0" key={property.id} property={property} />
             ))}
           </div>
 
