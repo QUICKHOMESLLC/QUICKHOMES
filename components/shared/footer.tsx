@@ -1,5 +1,8 @@
+import Image from 'next/image'
 import Link from "next/link"
 import { indianCities } from "@/lib/mock-data"
+
+import mainLogoWhite from '@/public/quickhomes_logo_white.svg'
 
 const footerLinks = {
   company: [
@@ -36,8 +39,8 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex size-9 items-center justify-center rounded-lg bg-primary">
-                <span className="text-lg font-bold text-primary-foreground">Q</span>
+              <div className="flex size-12 p-2 items-center justify-center rounded-lg bg-foreground">
+                <Image src={mainLogoWhite} alt="QuickHomes Logo Alt" />
               </div>
               <span className="text-xl font-bold text-foreground">QuickHomes</span>
             </Link>
@@ -45,7 +48,7 @@ export function Footer() {
               India&apos;s trusted real estate marketplace. Find, rent, buy or sell properties with ease.
             </p>
             <div className="mt-6">
-              <p className="text-xs font-medium text-muted-foreground">POPULAR CITIES</p>
+              <p className="text-xs font-medium text-foreground">POPULAR CITIES</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {indianCities.slice(0, 6).map((city) => (
                   <Link

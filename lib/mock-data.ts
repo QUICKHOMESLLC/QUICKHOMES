@@ -2,8 +2,8 @@
 export const indianCities = [
   { name: "Mumbai", state: "Maharashtra", properties: 12500, image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&auto=format&fit=crop&q=60" },
   { name: "Delhi", state: "Delhi NCR", properties: 9800, image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&auto=format&fit=crop&q=60" },
-  { name: "Bangalore", state: "Karnataka", properties: 8600, image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800&auto=format&fit=crop&q=60" },
-  { name: "Hyderabad", state: "Telangana", properties: 6200, image: "https://images.unsplash.com/photo-1572883454114-efb8c5e48f5e?w=800&auto=format&fit=crop&q=60" },
+  { name: "Bangalore", state: "Karnataka", properties: 8600, image: "https://images.unsplash.com/photo-1572372815316-fa5474e31ddc?w=800&auto=format&fit=crop&q=60" },
+  { name: "Hyderabad", state: "Telangana", properties: 6200, image: "https://images.unsplash.com/photo-1551161242-b5af797b7233?w=800&auto=format&fit=crop&q=60" },
   { name: "Pune", state: "Maharashtra", properties: 5400, image: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&auto=format&fit=crop&q=60" },
   { name: "Jaipur", state: "Rajasthan", properties: 3200, image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&auto=format&fit=crop&q=60" },
   { name: "Chennai", state: "Tamil Nadu", properties: 4800, image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop&q=60" },

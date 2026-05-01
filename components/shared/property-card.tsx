@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Property, formatIndianPrice, formatArea } from "@/lib/mock-data"
-import { Heart, MapPin, Bed, Bath, Square, Eye, Phone, Shield, Flame, Sparkles } from "lucide-react"
+import { Heart, MapPin, Bed, Bath, Square, Eye, Phone, BadgeCheck, Flame, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface PropertyCardProps {
@@ -26,14 +26,14 @@ export function PropertyCard({
   return (
     <Card className={cn("group overflow-hidden transition-all hover:shadow-lg", className)}>
       {/* Property Image */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-4/3 overflow-hidden">
         <img
           src={property.images[0]}
           alt={property.title}
           className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
           crossOrigin="anonymous"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
         
         {/* Top Badges */}
         <div className="absolute left-3 top-3 flex flex-wrap gap-2">
@@ -42,19 +42,19 @@ export function PropertyCard({
           </Badge>
           {property.features.isHot && (
             <Badge className="bg-orange-500 text-white">
-              <Flame className="mr-1 size-3" />
+              <Flame className="size-3" />
               Hot
             </Badge>
           )}
           {property.features.isNew && (
             <Badge className="bg-blue-500 text-white">
-              <Sparkles className="mr-1 size-3" />
+              <Sparkles className="size-3" />
               New
             </Badge>
           )}
           {property.features.verified && (
-            <Badge variant="outline" className="border-green-500 bg-green-500/10 text-green-700">
-              <Shield className="mr-1 size-3" />
+            <Badge className="border-green-300 bg-green-500 text-white">
+              <BadgeCheck className="size-3" />
               Verified
             </Badge>
           )}
