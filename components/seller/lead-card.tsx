@@ -42,7 +42,7 @@ export function LeadCard({ lead, onStatusChange }: LeadCardProps) {
   return (
     <Card className={cn("transition-all", lead.isNew && "border-primary/50 bg-primary/5")}>
       <CardContent className="p-4">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-4">
           <div className="flex-1 space-y-3">
             {/* Header */}
             <div className="flex items-start justify-between">
@@ -84,7 +84,7 @@ export function LeadCard({ lead, onStatusChange }: LeadCardProps) {
           </div>
 
           {/* Actions */}
-          <div className="flex gap-2 sm:flex-col">
+          <div className="flex gap-2">
             <Button size="sm" className="flex-1 sm:w-32">
               <Phone className="mr-2 size-4" />
               Call
