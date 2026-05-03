@@ -94,7 +94,7 @@ export default function LeadsPage() {
 
         {/* Leads List */}
         {filteredLeads.length > 0 ? (
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {filteredLeads.map((lead) => (
               <LeadCard 
                 key={lead.id} 
