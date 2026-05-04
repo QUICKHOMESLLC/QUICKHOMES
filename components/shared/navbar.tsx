@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { Menu, X, Heart, LayoutDashboard, Users, Home, Building2, Key } from "lucide-react"
 import { useState } from "react"
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import mainLogo from "@/public/quickhomes_logo.svg"
 
 const navLinks = [
@@ -32,7 +33,7 @@ export function Navbar() {
   const isSeller = pathname.startsWith("/seller")
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 shadow">
+    <header className="sticky top-0 z-50 w-full border-b bg-background shadow">
       <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/">
@@ -40,17 +41,17 @@ export function Navbar() {
             <Image
               src={mainLogo}
               alt="Quick Homes"
-              width={80}
+              className="w-16 sm:w-20"
             />
             <div>
-              <h1 className="font-bold text-2xl tracking-wide">QuickHomes</h1>
-              <p className="text-sm font-light">Find &bull; Buy &bull; Sell &bull; Rent</p>
+              <h1 className="font-bold text-xl sm:text-2xl tracking-wide">QuickHomes</h1>
+              <p className="text-xs sm:text-sm font-light">Find &bull; Buy &bull; Sell &bull; Rent</p>
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden lg:flex items-center gap-1 mx-auto">
           {navLinks.map((link) => {
             const Icon = link.icon
             const isActive = link.href === "/" 
@@ -73,6 +74,16 @@ export function Navbar() {
               </Link>
             )
           })}
+        </div>
+
+        {/* Login and SignUp */}
+        <div className="hidden lg:flex items-center gap-1">
+          <Button variant="ghost" asChild>
+            <Link href="#">Login</Link>
+          </Button>
+          <Button asChild>
+            <Link href="#">SignUp</Link>
+          </Button>
         </div>
 
         {/* Right Section */}
